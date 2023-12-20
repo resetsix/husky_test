@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+## 使用 [mrm](https://github.com/sapegin/mrm) 实现工程规范化配置
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+为了规范项目工程以及提交信息，开发人员会借助一些代码格式化或质量检查工具，如prettier、eslint、pre-commit、commit-msg。  
+但是这些东西配置起来太繁琐且复杂了，因此mrm出现就是为了解决这种配置繁琐问题。
 
-## Available Scripts
+一行命令即可完成「配置文件创建」、「忽略文件创建」、「package.json文件修改」等步骤。
 
-In the project directory, you can run:
+## 查看mrm支持的所有预设
 
-### `npm start`
+```bash
+npx mrm
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![mrm](./public/image/mrm.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 配置 eslint
 
-### `npm test`
+```bash
+npx mrm@2 eslint
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 配置 prettier
 
-### `npm run build`
+```bash
+npx mrm@2 prettier
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 配置 lint-staged
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npx mrm@2 lint-staged
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+然后根据自身项目需求修改prettier和eslint配置文件。

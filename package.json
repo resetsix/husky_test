@@ -24,7 +24,7 @@
         "posttest": "npm run format",
         "eject": "react-scripts eject",
         "lint": "eslint . --cache --fix",
-        "format": "prettier --loglevel warn --write \"**/*.{{ts,tsx,json,js,cjs,css}\"",
+        "format": "prettier --loglevel warn --write \"**/*.{{ts,tsx,json,js,cjs,css,md}\"",
         "prepare": "husky install"
     },
     "eslintConfig": {
@@ -57,6 +57,6 @@
     },
     "lint-staged": {
         "*.ts": "eslint --cache --fix",
-        "*.{ts,tsx,json,js,cjs,css}": "prettier --write"
+        "*.{ts,tsx,json,js,cjs,css,md}": "prettier --write"
     }
 }
