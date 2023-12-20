@@ -19,8 +19,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "pretest": "npm run lint",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "posttest": "npm run format",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --cache --fix",
+    "format": "prettier --loglevel warn --write \"**/*.{{ts,tsx,json}\"",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +44,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,tsx,json}": "prettier --write"
   }
 }
